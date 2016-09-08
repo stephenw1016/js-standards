@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>JS Coding Standards</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
+		<link rel="stylesheet" href="css/theme/custom.css">
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -24,8 +23,192 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- #1 -->
+				<section>
+					<h1>JS Coding Standards</h1>
+					<h4>+ Angular</h4>
+				</section>
+
+				<!-- #2 -->
+				<section>
+					<p>but first...</p>
+					<h6 class="fragment">software design principles</h6>
+				</section>
+
+				<!-- #3 -->
+				<section>
+					<section>
+						<h3>Single Responsibility Principle</h3>
+						<p>(high cohesion)</p>
+						<ul>
+							<li>Reduced module complexity (they are simpler, having fewer operations).</li>
+							<li>Increased system maintainability (decreased side effects when modifying)</li>
+							<li>Promotes reusability</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Loose Coupling</h3>
+						<ul>
+							<li>Decreased side effects during modification</li>
+							<li>Easy to test</li>
+							<li>add stuff..</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Encapsulation</h3>
+						<ul>
+							<li>Easy to modify/extend implementation</li>
+							<li>add stuff...</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Depend on Abstractions</h3>
+						<p>(dependency injection, coding to interface)</p>
+						<ul>
+							<li>add stuff</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Y.A.G.N.I.</h3>
+						<p>(Ya' Ain't Gonna Need It)</p>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h3>D.R.Y.</h3>
+						<p>(Don't Repeat Yourself)</p>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- #4 -->
+				<section>
+					Now for some Angular...
+				</section>
+
+				<!-- #5 -->
+				<section>
+					<section>
+						<h3>Digest Cycle</h3>
+						<img src="assets/images/digest.png" />
+					</section>
+					<section>
+						<h3>Scope Soup</h3>
+					</section>
+					<section data-markdown="assets/markdown/recipeForDisaster.md"></section>
+					<section>
+						<h3>Keeping $scope clean</h3>
+						<ul>
+							<li>limit the amount of logic within html templates</li>
+							<li>only give the view what it really needs (display data vs. data)</li>
+							<li>know when to update values</li>
+							<li>prefer filtering in JS vs. templates</li>
+							<li>prefer <code>ng-bind="someValue"</code> over <code>{{someValue}}</code></li>
+						</ul>
+					</section>
+					<section data-markdown="assets/markdown/recipeForSuccess.md"></section>
+					<section>
+						<img src="assets/images/no_soup.gif" />
+					</section>
+				</section>
+
+				<!-- #6 -->
+				<section>
+					<h3>Moving Forward w/AngularJS 1.5</h3>
+				</section>
+
+				<!-- #7 -->
+				<section>
+					<h3>Components</h3>
+				</section>
+
+				<!-- #8 -->
+				<section>
+					<section><h3>Component Lifecycle Hooks</h3></section>
+					<section data-markdown="assets/markdown/onInit.md"></section>
+					<section data-markdown="assets/markdown/postLink.md"></section>
+					<section data-markdown="assets/markdown/onChanges.md"></section>
+					<section data-markdown="assets/markdown/onDestroy.md"></section>
+				</section>
+
+				<!-- #9 -->
+				<section>
+					<section data-markdown="">
+						#### which should I use?
+
+						`component` vs. `directive`
+					</section>
+					<section>
+						<h3>it depends</h3>
+					</section>
+					<section data-markdown>
+						When you use a **component**, you *create* DOM, when you use .directive() you decorate DOM, that is the mindset
+
+						A **directive** *decorates* the DOM, it adds behaviour and extends existing DOM.
+					</section>
+					<section data-markdown>
+						**Components** are restricted to 'E' and cannot be changed otherwise.
+
+						**Directives** *should* be restricted to 'A', as they are intended to decorate.
+					</section>
+				</section>
+
+				<!-- #10 -->
+				<section data-markdown="">
+					#### which should I use?
+
+					`service` vs. `factory`
+
+					(*hint*: factory is going away in Angular 2)
+				</section>
+
+				<!-- #11 -->
+				<section>
+					<h3>testing AngularJS</h3>
+					<img src="assets/images/jasmine_karma.png" />
+				</section>
+
+				<!-- #12 -->
+				<section>
+					<h3>Testing: Controllers</h3>
+				</section>
+
+				<!-- #13 -->
+				<section>
+					<h3>Testing: Directives</h3>
+				</section>
+
+				<!-- #14 -->
+				<section>
+					<h3>Testing: Services</h3>
+				</section>
+
+				<!-- #15 -->
+				<section>
+					<section>
+						<h3>Clean Code</h3>
+					</section>
+					<section>
+						<h3>Meaningful Names</h3>
+					</section>
+					<section>
+						<h3>Functions</h3>
+					</section>
+					<section>
+						<h3>Comments</h3>
+					</section>
+					<section>
+						<h3>Formatting</h3>
+					</section>
+				</section>
+
+				<!-- #16 -->
+				<section>
+					<h3>&lt;/rant&gt;</h3>
+				</section>
 			</div>
 		</div>
 
